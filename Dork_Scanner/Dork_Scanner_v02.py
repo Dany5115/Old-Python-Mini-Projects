@@ -6,7 +6,7 @@ from googlesearch import search
 import time
 
 
-Excelfile = xlrd.open_workbook(r'C:\Users\Daniel\Desktop\Virus_Archive\Dorker\Dorker_v01\Dorks.xlsx') # Excel path
+Excelfile = xlrd.open_workbook(r'C:\Users\Daniel\Desktop\Dork_Scanner\Dorks.xlsx') # Excel path
 sheet = Excelfile.sheet_by_index(0)
 headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36"}
 
