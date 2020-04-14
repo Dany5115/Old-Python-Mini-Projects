@@ -7,3 +7,4 @@ Flaw: Google stops you after a few seconds, by giving an error: "HTTP Error 429:
 UPDATE1: found out that you need to sign & set up a google JSON API billing for being provided to do more than 100 search queries per day. more information at: "https://developers.google.com/custom-search/v1/overview"
 
 And also a better programming structure than the first version(v01). but anyway the flaw still exists.
+gr
