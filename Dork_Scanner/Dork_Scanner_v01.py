@@ -5,7 +5,7 @@ import lxml
 from googlesearch import search
 import time
 
-Exelfile = xlrd.open_workbook(r'C:\Users\Daniel\Desktop\Virus_Archive\Dorker\Dorks.xlsx') # Excel path
+Exelfile = xlrd.open_workbook(r'C:\Users\Daniel\Desktop\Dork_Scanner\Dorks.xlsx') # Excel path
 sheet = Exelfile.sheet_by_index(0)
 website = input("Type in the website name: ")
 
