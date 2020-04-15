@@ -1,5 +1,6 @@
 import socket
 import threading
+import time
 
 s = socket.socket()          
 print ("Socket successfully created")
@@ -35,6 +36,8 @@ while True:
       # Start threads:
       getThreads.start()
       sendThreads.start()
+      
+      time.sleep(1) # add this to save ur cpu & ram!
 
    # Close the connection after the second loops finished (add a condition) 
    c.close()
