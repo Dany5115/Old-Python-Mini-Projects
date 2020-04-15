@@ -1,5 +1,6 @@
 import socket
 import threading
+import time
 
 s = socket.socket()          
   
@@ -24,6 +25,8 @@ while True:
         # Start threads:
         getThreadc.start()
         sendThreadc.start()
+        
+        time.sleep(1) # add this to save ur cpu & ram!
 
     # close the connection (with the condition that finishes the second loop)
     s.close()
