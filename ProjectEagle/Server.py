@@ -2,7 +2,7 @@ from pynput import mouse
 import socket
 import threading
 import time
-from pynput import keyboard
+from pynput.keyboard import Key, Listener
 
 s = socket.socket()          
 print ("Socket successfully created")
@@ -18,7 +18,7 @@ print ("socket binded to %s" %(port))
 s.listen(5)      
 print ("socket is listening") 
 
-reset = 6
+reset = 5
 
 while True: 
   
@@ -48,9 +48,14 @@ while True:
         global t0
         t0 = reset
 
-    with mouse.Listener(on_move=on_move, on_scroll=on_scroll) as listener:
+    def on_press(key):
+        global t0
+        t0 = reset
+
+    with mouse.Listener(on_move=on_move, on_scroll=on_scroll), Listener(on_press=on_press) as listener:
         listener.join()
 
+    
 
    
 #{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
